@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+
+    wiremock:
+        image: wiremock/wiremock:latest
+        restart: unless-stopped
+        container_name: new-kredicity-mock
+        ports:
+            - 8082:8080
+        networks:
+            - local_network
+        volumes:
+            - "./new-kredicity-mock/mappings:/home/wiremock/mappings"
+        entrypoint: ["/docker-entrypoint.sh", "--global-response-templating", "--disable-gzip", "--enable-stub-cors", "--verbose"]
+
+    vue:
+        build:
+            context: ./vue
+            dockerfile: ./dockerfile
+        container_name: vue-app
+        restart: unless-stopped
+        volumes:
+            - "./vue:/app"
+        ports:
+            - 8000:8000
+        command: npm run dev
+        networks:
+            - local_network
+
+networks:
+  local_network:
+    name: local_network
+    driver: bridge

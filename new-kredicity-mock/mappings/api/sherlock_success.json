@@ -1,0 +1,83 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "POST",
+        "urlPath": "/api/prevencion-fraude-celular/sherlock"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "response": {
+                "operador": "Movistar",
+                "consejo": "No concluyente",
+                "sim_cambiada": "No",
+                "comportamiento": "Alto",
+                "fraude_reporte": "Si",
+                "categoria_reporte": "string",
+                "fecha_reporte": "2021-06-15",
+                "vencimiento_reporte": "2021-06-15",
+                "fraude_descripcion": "string",
+                "cel_cuenta_bancaria_check": "No",
+                "ultima_vista_cuenta": "Sin datos",
+                "total_cuentas": 1,
+                "cambiado_ultima_semana": "Sin datos",
+                "dias": null,
+                "horas": null,
+                "porcentaje_anomalia": 30,
+                "lectura_anomalia": "Sin anomalia",
+                "porcentaje_confianza": 10,
+                "lectura_confianza": "Sin desconfianza",
+                "sms_cobranza_porcentaje": 56.65,
+                "esta_bancarizado": "No",
+                "entidades_bancarizado": "string",
+                "cobranza_ultimos_3_meses": "No",
+                "dias_activo": "175",
+                "fecha_activo": "2012-05-27",
+                "activada_ultimos_3_meses": "Si",
+                "estado": "Activa",
+                "ranking_sms": [
+                    {
+                        "categoria": "Notificaciones Bancarias",
+                        "segmento": "Financiero",
+                        "porcentaje": 50.49
+                    },
+                    {
+                        "categoria": "Cobranza",
+                        "segmento": "Financiero",
+                        "porcentaje": 4.76
+                    },
+                    {
+                        "categoria": "Indefinido",
+                        "segmento": "Tecnologia",
+                        "porcentaje": 0.98
+                    },
+                    {
+                        "categoria": "cobranza",
+                        "segmento": "call center",
+                        "porcentaje": 0.42
+                    }
+                ],
+                "cambio_rango": "No",
+                "rango_para_evaluar": "24h",
+                "fuente_datos": "WSOperator",
+                "operador_original": "Claro",
+                "historial_portabilidad": [
+                    {
+                        "fecha": "2021-15-06",
+                        "operador": "movistar"
+                    },
+                    {
+                        "fecha": "2022-15-06",
+                        "operador": "tigo"
+                    }
+                ],
+                "fecha_validacion": "2024-08-29",
+                "sim_enriquecida": "Sin datos",
+                "simcard": "Sin datos"
+            }
+        }
+    }
+}
